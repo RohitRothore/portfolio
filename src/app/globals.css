@@ -2,20 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    @apply text-gray-700 text-sm lg:text-base scroll-smooth 
 }
+
+@layer components {
+    .no-scrollbar::-webkit-scrollbar {
+      @apply hidden;
+    }
+    .no-scrollbar-show::-webkit-scrollbar {
+      @apply block;
+    }
+    .divider {
+      @apply border-b border-gray-100;
+    }
+  }
+  
+  * {
+    -webkit-tap-highlight-color: rgba(black, 0);
+    :focus-visible,
+    :-webkit-any-link:focus-visible {
+      outline: 0;
+    }
+    &::-webkit-scrollbar {
+      @apply h-[6px] w-[6px];
+    }
+    &::-webkit-scrollbar-thumb {
+      @apply rounded-[30px] bg-slate-200;
+    }
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  .overflow-hr-scroll {
+    margin-right: -1rem;
+    margin-left: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    @media (min-width: 768px) {
+      margin-right: 0;
+      margin-left: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
