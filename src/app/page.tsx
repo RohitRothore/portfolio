@@ -3,6 +3,7 @@ import MyExperience from "@/components/homePage/MyExperience";
 import Features from "@/components/homePage/features/Features";
 import Portfolio from "@/components/homePage/portfolio/Portfolio";
 import Contact from "@/components/homePage/contact/Contact";
+import Resume from "@/components/homePage/resume/Resume";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroSection />
       <MyExperience />
       <Features />
+      <Resume />
       <Portfolio />
       <Contact />
     </main>

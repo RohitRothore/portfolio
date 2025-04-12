@@ -90,7 +90,7 @@ const Features = () => {
           <p className="text-center uppercase text-red-600 text-lg mb-2 font-medium">
             FEATURES
           </p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">What I Do</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">What I Do</h2>
           <p className="text-gray-600 max-w-4xl mx-auto">
             I specialize in creating powerful web applications with intuitive
             designs, optimizing them for search engines, and delivering

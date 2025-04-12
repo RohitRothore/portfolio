@@ -1,6 +1,6 @@
 "use client";
 
-import { Download, Github, Linkedin } from "feather-icons-react";
+import { Download, Github, Linkedin, Twitter } from "feather-icons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Typewriter } from "react-simple-typewriter";
@@ -52,6 +52,13 @@ export default function HeroSection() {
               target="_blank"
             >
               <Linkedin className="group-hover:text-white" />
+            </Link>
+            <Link
+              href="https://twitter.com/Rohit_Rathore02"
+              className="p-4 group hover:from-red-600 hover:to-indigo-600 rounded bg-gradient-to-tr from-gray-300 to-white shadow-xl hover:-translate-y-1 transition duration-300"
+              target="_blank"
+            >
+              <Twitter className="group-hover:text-white" />
             </Link>
           </div>
           <Link
