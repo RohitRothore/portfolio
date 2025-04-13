@@ -3,19 +3,23 @@ export const HEADER = {
     MENU: [
         {
             name: 'Home',
-            id: '/#home',
+            id: '/#hero-section',
+        },
+        {
+            name: 'Experience',
+            id: '/#experience',
         },
         {
             name: 'Features',
             id: '/#features',
         },
         {
-            name: 'Projects',
-            id: '/#projects',
-        },
-        {
             name: 'Resume',
             id: '/#resume',
+        },
+        {
+            name: 'Projects',
+            id: '/#projects',
         },
         {
             name: 'Contact me',

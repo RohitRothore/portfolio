@@ -4,7 +4,7 @@ import HireMeButton from "../HireMeButton";
 
 export default function MyExperience() {
   return (
-    <section className="container py-16 space-y-16">
+    <section id="experience" className="container py-16 space-y-16">
       <div>
         <p className="text-center uppercase text-red-600 text-lg font-medium">
           Over 2 years of experience

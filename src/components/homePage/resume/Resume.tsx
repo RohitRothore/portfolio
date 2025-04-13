@@ -225,7 +225,7 @@ const Resume: React.FC = () => {
   };
 
   return (
-    <section className="py-16">
+    <section id='resume' className="py-16">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold text-gray-800 mb-8">My Resume</h2>

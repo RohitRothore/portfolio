@@ -7,7 +7,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 export default function HeroSection() {
   return (
-    <section className="container max-w-[1300px] flex justify-center gap-10 py-24 border-b border-gray-300">
+    <section id="hero-section" className="container max-w-[1300px] flex justify-center gap-10 py-24 border-b border-gray-300">
       <div className="w-[58%] space-y-6">
         <p className="tracking-widest text-gray-600">WELCOME TO MY WORLD</p>
         <div className="text-6xl font-bold space-x-4 tracking-wide">
