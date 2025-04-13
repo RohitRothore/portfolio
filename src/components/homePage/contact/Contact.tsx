@@ -45,7 +45,7 @@ const Contact = () => {
 
         <div className="flex flex-col md:flex-row gap-12">
           {/* Contact Information */}
-          <div className="p-8 rounded-xl shadow-2xl border w-5/12">
+          <div className="p-8 rounded-xl shadow-2xl border md:w-5/12">
             <Image
               src="https://rainbowit.net/themes/inbio/wp-content/uploads/2021/08/contact1.png"
               className="h-auto w-full mb-8 rounded-lg hover:scale-105 transition-all duration-300"
@@ -107,7 +107,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="p-8 rounded-lg shadow-2xl border w-7/12">
+          <div className="p-8 rounded-lg shadow-2xl border md:w-7/12">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label

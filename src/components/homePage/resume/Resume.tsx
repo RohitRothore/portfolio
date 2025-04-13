@@ -231,8 +231,8 @@ const Resume: React.FC = () => {
           <h2 className="text-5xl font-bold text-gray-800 mb-8">My Resume</h2>
         </div>
 
-        <div className="flex justify-center mb-16">
-          <div className="inline-flex bg-white rounded-lg shadow-md p-1 space-x-1">
+        <div className="flex justify-center overflow-x-auto mb-16">
+          <div className="inline-flex bg-white rounded-lg min-w-max shadow-md p-1 space-x-1">
             {tabs.map((tab) => (
               <TabButton
                 key={tab.id}

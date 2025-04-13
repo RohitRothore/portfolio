@@ -7,7 +7,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 export default function HeroSection() {
   return (
-    <section id="hero-section" className="container max-w-[1300px] flex justify-center gap-10 py-24 border-b border-gray-300">
+    <section id="hero-section" className="container max-w-[1300px] flex flex-col md:flex-row justify-center gap-10 py-24 border-b border-gray-300">
       <div className="w-[58%] space-y-6">
         <p className="tracking-widest text-gray-600">WELCOME TO MY WORLD</p>
         <div className="text-6xl font-bold space-x-4 tracking-wide">
@@ -37,7 +37,7 @@ export default function HeroSection() {
           just to spruce things up, but doing it in ways that.
         </p>
         <p className="tracking-widest text-gray-600 !mt-12">FIND WITH ME</p>
-        <div className="flex justify-between">
+        <div className="flex flex-col md:flex-row justify-between">
           <div className="flex gap-x-8">
             <Link
               href="https://github.com/RohitRothore"
@@ -72,10 +72,10 @@ export default function HeroSection() {
         </div>
       </div>
       <div className="w-[42%]">
-        <div className="h-[460px] w-[500px] rounded-lg shadow-lg bg-slate-300 flex justify-center items-end">
+        <div className="h-[460px] md:w-[500px] rounded-lg shadow-lg bg-slate-300 flex justify-center items-end">
           <Image
             src="https://cdn.uninist.com/files/1740634318035lindinprofileimage3removebgpreview.png"
-            className="h-[600px]"
+            className="md:h-[600px]"
             alt="Hero image"
             height={460}
             width={500}

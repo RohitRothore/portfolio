@@ -48,7 +48,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex flex-col justify-between">
-        <div className="text-lg text-slate-700 space-x-8">
+        <div className="text-lg flex flex-col md:flex-row text-slate-700 space-x-8">
           {MENU.map(({ id, name }) => (
             <Link
               className="hover:text-red-600 underline transition-colors"

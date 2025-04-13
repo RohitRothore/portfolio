@@ -13,7 +13,7 @@ export default function MyExperience() {
           My Experience
         </p>
       </div>
-      <div className="flex max-w-[1024px] mx-auto gap-5 p-4 shadow-[0px_0px_20px_5px_rgba(66,_220,_219,_0.5)] shadow-gray-400 hover:scale-105 transition-all duration-300 rounded-xl">
+      <div className="flex flex-col md:flex-row max-w-[1024px] mx-auto gap-5 p-4 shadow-[0px_0px_20px_5px_rgba(66,_220,_219,_0.5)] shadow-gray-400 hover:scale-105 transition-all duration-300 rounded-xl">
         <Image
           src="https://lh3.googleusercontent.com/p/AF1QipPtEuJx9ltBUwogPSbL_YkxtUe2pjFTtrPti7uh=s1360-w1360-h1020"
           className="h-40 w-64 rounded-lg hover:scale-105 transition-all duration-300"
@@ -21,7 +21,7 @@ export default function MyExperience() {
           height={176}
           width={260}
         />
-        <div className="flex justify-between items-center w-2/3">
+        <div className="flex flex-col md:flex-row justify-between items-center w-2/3">
           <div className="space-y-3">
             <span className="py-1 px-3 text-sm rounded-3xl bg-gray-400 text-white">
               2024 - Present
@@ -37,7 +37,7 @@ export default function MyExperience() {
           <HireMeButton />
         </div>
       </div>
-      <div className="flex max-w-[1024px] mx-auto gap-5 p-4 shadow-[0px_0px_20px_5px_rgba(66,_220,_219,_0.5)] shadow-gray-400 hover:scale-105 transition-all duration-300 rounded-xl">
+      <div className="flex flex-col md:flex-row max-w-[1024px] mx-auto gap-5 p-4 shadow-[0px_0px_20px_5px_rgba(66,_220,_219,_0.5)] shadow-gray-400 hover:scale-105 transition-all duration-300 rounded-xl">
        <Image
           src="https://lh3.googleusercontent.com/p/AF1QipPkofp81ixc0ypNWyfLZmnkzkpTzYXLLSkMeBKq=s1360-w1360-h1020"
           className="h-40 object-cover w-64 rounded-lg hover:scale-105 transition-all duration-300"
@@ -45,7 +45,7 @@ export default function MyExperience() {
           height={176}
           width={260}
         />
-        <div className="flex justify-between items-center w-2/3">
+        <div className="flex flex-col md:flex-row justify-between items-center w-2/3">
           <div className="space-y-3">
             <span className="py-1 px-3 text-sm rounded-3xl bg-gray-400 text-white">
               2023 - 2024
