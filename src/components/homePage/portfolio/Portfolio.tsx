@@ -99,9 +99,9 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 md:px-8">
+    <section id="projects" className="md:py-20 py-12 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 md:mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-4">My Project</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Check out some of my latest projects. Each project is unique and

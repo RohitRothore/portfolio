@@ -21,7 +21,7 @@ export default function Header() {
 
   return (
     <header
-      className={`bg-gradient-to-l from-slate-200 to-slate-100 sticky top-0 w-full h-20 z-20 transition-shadow ${
+      className={`bg-gradient-to-l from-slate-200 to-slate-100 sticky top-0 w-full h-[70px] md:h-20 z-20 transition-shadow ${
         isScrolled ? "shadow-md" : ""
       }`}
     >

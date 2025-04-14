@@ -43,10 +43,10 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
     <div className="absolute left-0 top-[38px]">
       <div className="h-1.5 w-8 bg-gray-300 transition-all duration-300 group-hover:bg-red-600"></div>
     </div>
-    <div className="bg-gradient-to-br from-gray-50 group-hover:from-indigo-600 group-hover:to-red-500 to-gray-100 rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-500">
-      <div className="flex justify-between items-start mb-4">
+    <div className="bg-gradient-to-br from-gray-50 group-hover:from-indigo-600 group-hover:to-red-500 to-gray-100 rounded-lg shadow-lg md:p-6 p-3 hover:shadow-xl transition-all duration-500">
+      <div className="flex flex-col md:flex-row justify-between items-start mb-4">
         <h4 className="text-xl font-semibold group-hover:text-white text-gray-800">{title}</h4>
-        <span className="px-3 py-1 bg-red-50 group-hover:bg-red-600 group-hover:text-white text-red-600 text-sm font-medium rounded-full">
+        <span className="px-3 py-1 bg-red-50 mt-3 md:mt-0 group-hover:bg-red-600 group-hover:text-white text-red-600 text-sm font-medium rounded-full">
           {badge}
         </span>
       </div>
@@ -225,14 +225,11 @@ const Resume: React.FC = () => {
   };
 
   return (
-    <section id='resume' className="py-16">
+    <section id='resume' className="md:py-16 py-12">
       <div className="container">
-        <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold text-gray-800 mb-8">My Resume</h2>
-        </div>
-
-        <div className="flex justify-center overflow-x-auto mb-16">
-          <div className="inline-flex bg-white rounded-lg min-w-max shadow-md p-1 space-x-1">
+          <h2 className="md:text-5xl text-3xl font-bold text-center text-gray-800 mb-8">My Resume</h2>
+        <div className="flex justify-center overflow-x-auto rounded-lg mb-8 md:mb-16">
+          <div className="inline-flex bg-white rounded-lg ml-60 md:ml-0 min-w-max shadow-md p-1 space-x-1">
             {tabs.map((tab) => (
               <TabButton
                 key={tab.id}

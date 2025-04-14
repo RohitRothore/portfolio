@@ -8,7 +8,7 @@ const { LOGO, MENU } = HEADER;
 
 export default function Footer() {
   return (
-    <section className="container py-16 border-t border-gray-400">
+    <section className="container py-12 md:py-16 border-t border-gray-400">
       <div className="flex flex-col md:flex-row justify-between">
         <div>
           <div className="flex items-center gap-x-4 mb-8">
@@ -47,11 +47,11 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col justify-between">
-        <div className="text-lg flex flex-col md:flex-row text-slate-700 space-x-8">
+        <div className="flex flex-col gap-6 mt-8 justify-between">
+        <div className="text-lg flex flex-row flex-wrap -ml-4 text-slate-700">
           {MENU.map(({ id, name }) => (
             <Link
-              className="hover:text-red-600 underline transition-colors"
+              className="hover:text-red-600 underline transition-colors mx-4"
               key={id}
               href={id}
             >
