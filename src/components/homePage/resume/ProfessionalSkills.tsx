@@ -26,7 +26,7 @@ const ProfessionalSkills: React.FC = () => {
   ];
 
   return (
-    <div className="grid md:grid-cols-2 gap-8">
+    <div className="grid md:grid-cols-2 gap-8 animate-slideInRight transition-all duration-300">
       {skillCategories.map((category, categoryIndex) => (
         <div key={categoryIndex}>
           <div className="flex items-center mb-8">

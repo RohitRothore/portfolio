@@ -188,7 +188,7 @@ const Resume: React.FC = () => {
     switch (activeTab) {
       case "education":
         return (
-          <div>
+          <div className="animate-slideInRight transition-all duration-300">
             {renderTimelineSection("Education", "2016 - 2023", education)}
           </div>
         );
@@ -196,7 +196,7 @@ const Resume: React.FC = () => {
         return <ProfessionalSkills />;
       case "experience":
         return (
-          <div>
+          <div className="animate-slideInRight transition-all duration-300">
             {renderTimelineSection(
               "Professional Experience",
               "2023 - Present",
@@ -206,7 +206,7 @@ const Resume: React.FC = () => {
         );
       case "projects":
         return (
-          <div>
+          <div className="animate-slideInRight transition-all duration-300">
             {renderTimelineSection("Projects", "2023", projects)}
           </div>
         );
