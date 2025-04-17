@@ -14,10 +14,56 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    success?: boolean;
+    message?: string;
+  }>({});
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    setSubmitStatus({});
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          success: true,
+          message: "Message sent successfully! I will get back to you soon.",
+        });
+        // Reset form
+        setFormData({
+          name: "",
+          phone: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setSubmitStatus({
+          success: false,
+          message: data.message || "Failed to send message. Please try again.",
+        });
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitStatus({
+        success: false,
+        message: "An error occurred. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -77,9 +123,7 @@ const Contact = () => {
                   rohitrathorebanda123@gmail.com
                 </Link>
               </div>
-              <p className="tracking-widest text-red-600 !my-6">
-                FIND WITH ME
-              </p>
+              <p className="tracking-widest text-red-600 !my-6">FIND WITH ME</p>
               <div className="flex gap-x-8">
                 <Link
                   href="https://github.com/RohitRothore"
@@ -108,13 +152,25 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="p-8 rounded-lg shadow-2xl border md:w-7/12">
+            {submitStatus.message && (
+              <div
+                className={`mb-6 p-4 rounded-lg ${
+                  submitStatus.success
+                    ? "bg-green-100 text-green-800 border border-green-200"
+                    : "bg-red-100 text-red-800 border border-red-200"
+                }`}
+              >
+                {submitStatus.message}
+              </div>
+            )}
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
                   htmlFor="name"
                   className="block text-sm font-medium text-gray-700 mb-1"
                 >
-                  Your Name
+                  Your Name <sup className="text-red-600">*</sup>
                 </label>
                 <input
                   type="text"
@@ -122,8 +178,11 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
+                  maxLength={50}
+                  minLength={3}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
                   required
+                  disabled={isSubmitting}
                 />
               </div>
 
@@ -132,15 +191,19 @@ const Contact = () => {
                   htmlFor="phone"
                   className="block text-sm font-medium text-gray-700 mb-1"
                 >
-                  Phone Number
+                  Phone Number <sup className="text-red-600">*</sup>
                 </label>
                 <input
-                  type="tel"
+                  type="number"
                   id="phone"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
+                  required
+                  minLength={10}
+                  maxLength={16}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
+                  disabled={isSubmitting}
                 />
               </div>
 
@@ -149,7 +212,7 @@ const Contact = () => {
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-700 mb-1"
                 >
-                  Email
+                  Email <sup className="text-red-600">*</sup>
                 </label>
                 <input
                   type="email"
@@ -159,6 +222,7 @@ const Contact = () => {
                   onChange={handleChange}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
                   required
+                  disabled={isSubmitting}
                 />
               </div>
 
@@ -177,6 +241,7 @@ const Contact = () => {
                   onChange={handleChange}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
                   required
+                  disabled={isSubmitting}
                 />
               </div>
 
@@ -195,14 +260,20 @@ const Contact = () => {
                   rows={4}
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"
                   required
+                  disabled={isSubmitting}
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition-colors"
+                className={`w-full py-2 px-4 rounded-lg transition-colors ${
+                  isSubmitting
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-red-600 hover:bg-red-700 text-white"
+                }`}
+                disabled={isSubmitting}
               >
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
