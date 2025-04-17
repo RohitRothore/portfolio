@@ -27,12 +27,12 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: "My Portfolio",
+    title: "Rohit Rathore",
     description: "Welcome to my personal portfolio website showcasing my projects and skills",
-    siteName: "My Portfolio",
+    siteName: "Rohit Rathore",
   },
   twitter: {
-    title: "My Portfolio",
+    title: "Rohit Rathore",
     description: "Welcome to my personal portfolio website showcasing my projects and skills",
   },
   icons: {
