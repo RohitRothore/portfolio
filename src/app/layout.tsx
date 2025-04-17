@@ -4,6 +4,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Header } from "@/components/header";
 
 import "./globals.css";
+import { HEADER } from "./constants/HEADER";
+
+const { LOGO } = HEADER;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,8 +19,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "My portfolio",
-  description: "This is my portfolio",
+  title: "Rohit Rathore",
+  description: "Welcome to my personal portfolio website showcasing my projects and skills",
+  keywords: ["portfolio", "developer", "projects", "skills"],
+  authors: [{ name: "Rohit Rathore" }],
+  creator: "Rohit Rathore",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    title: "My Portfolio",
+    description: "Welcome to my personal portfolio website showcasing my projects and skills",
+    siteName: "My Portfolio",
+  },
+  twitter: {
+    title: "My Portfolio",
+    description: "Welcome to my personal portfolio website showcasing my projects and skills",
+  },
+  icons: {
+    icon: LOGO,
+    shortcut: LOGO,
+    apple: LOGO,
+  },
 };
 
 export default function RootLayout({
@@ -27,6 +49,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href={LOGO} sizes="any" />
+        <link rel="apple-touch-icon" href={LOGO} />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
