@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { motion } from "framer-motion";
 import HeroSection from "@/components/homePage/HeroSection";
@@ -59,15 +59,7 @@ export default function Home() {
         <Resume />
       </motion.div>
 
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.7}}
-        variants={sectionAnimation}
-      >
-        <Portfolio />
-      </motion.div>
+      <Portfolio />
 
       <motion.div
         initial="hidden"
