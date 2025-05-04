@@ -88,7 +88,7 @@ const Portfolio = () => {
       title: "Dev Detective",
       imageUrl:
         "https://cdn.uninist.com/files/1744449109473screenshot-from-20250412-144121.webp",
-      link: "https://main--jade-caramel-f8683b.netlify.app/",
+      link: "https://devdetectiverohit.netlify.app/",
     },
     {
       title: "Top Course",
