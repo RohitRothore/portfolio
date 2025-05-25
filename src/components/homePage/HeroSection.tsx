@@ -62,7 +62,7 @@ export default function HeroSection() {
             </Link>
           </div>
           <Link
-            href="https://salmon-theodora-98.tiiny.site/"
+            href="https://crimson-cora-45.tiiny.site/"
             className="py-4 mt-12 md:mt-0 px-8 group flex gap-x-2 from-red-600 to-indigo-600 text-white hover:text-gray-700 rounded-xl bg-gradient-to-tr hover:from-gray-300 hover:to-white shadow-xl transition duration-300 mr-40"
             target="_blank"
           >

@@ -45,13 +45,17 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
     </div>
     <div className="bg-gradient-to-br from-gray-50 group-hover:from-indigo-600 group-hover:to-red-500 to-gray-100 rounded-lg shadow-lg md:p-6 p-3 hover:shadow-xl transition-all duration-500">
       <div className="flex flex-col md:flex-row justify-between items-start mb-4">
-        <h4 className="text-xl font-semibold group-hover:text-white text-gray-800">{title}</h4>
+        <h4 className="text-xl font-semibold group-hover:text-white text-gray-800">
+          {title}
+        </h4>
         <span className="px-3 py-1 bg-red-50 mt-3 md:mt-0 group-hover:bg-red-600 group-hover:text-white text-red-600 text-sm font-medium rounded-full">
           {badge}
         </span>
       </div>
-      <p className="text-gray-500 group-hover:text-white text-sm mb-2">{subtitle}</p>
-      <p className="text-gray-600 group-hover:text-white">{description}</p>
+      <p className="text-gray-500 group-hover:text-white text-sm mb-2">
+        {subtitle}
+      </p>
+      <p className="text-gray-600 group-hover:text-white whitespace-pre-line">{description}</p>
     </div>
   </div>
 );
@@ -96,13 +100,13 @@ const Resume: React.FC = () => {
       location: "Sagar, Madhya Pradesh",
     },
     {
-        period: "June 2016 - May 2018",
-        title: "Secondary Education",
-        institution: "Govt. Higher Secondary School, Pajnari Sagar Mp",
-        description:
-          "Completed Secondary Education with focus on Computer Science and Mathematics.",
-        location: "Sagar, Madhya Pradesh",
-      },
+      period: "June 2016 - May 2018",
+      title: "Secondary Education",
+      institution: "Govt. Higher Secondary School, Pajnari Sagar Mp",
+      description:
+        "Completed Secondary Education with focus on Computer Science and Mathematics.",
+      location: "Sagar, Madhya Pradesh",
+    },
   ];
 
   const experience: ExperienceItem[] = [
@@ -111,7 +115,7 @@ const Resume: React.FC = () => {
       title: "Associate Software Engineer",
       company: "University Living",
       description:
-        "• Developed and maintained scalable web applications using the MERN stack and Next.js, optimizing platform performance and reducing page load times by 30%\n• Implemented advanced search, booking functionalities leading to 20% increase in user retention across 300+ cities\n• Collaborated with cross-functional teams to integrate value-added services, contributing to 15% growth\n• Enhanced data security measures ensuring compliance with global standards, supporting over 1.75 million beds globally.",
+        "• Developed and maintained scalable web applications using the MERN stack and Next.js, optimizing platform performance and reducing page load times by 30 percentage to enhance the user experience. \n • Implemented advanced search, booking functionalities, and new features, leading to a 20 percentage increase in user retention and enabling students to efficiently compare and secure accommodations across 300+ cities. \n • Collaborated with cross-functional teams to integrate value-added services and improve overall student experiences, contributing to a 15 percentage growth in the platform’s reach and city listings. \n Tools and Technology: Next JS,VS Code, Postman, MongoDB, TypeScript, Git and GitHub, Node js, Express js,",
       location: "Noida, Uttar Pradesh",
     },
     {
@@ -119,7 +123,7 @@ const Resume: React.FC = () => {
       title: "Associate Software Engineer",
       company: "DigitalYuga",
       description:
-        "• Developed property dealing and CRM applications using MERN stack and Next.js, increasing client engagement by 25%\n• Optimized database performance using MongoDB and Microsoft SQL, reducing query response times by 40%\n• Led successful delivery of multiple web solutions with 95% client satisfaction rate\n• Contributed to 20% increase in client acquisition through high-quality digital solutions.",
+        "• Engineered property management and CRM applications utilizing the MERN stack alongside Next.js, achieving a 25 percentage surge in both client engagement and overall property management efficiency gains across the board. \n • Optimized database performance using MongoDB and Microsoft SQL, reducing query response times by 40 percentage and enhancing data management for client and property records. \n • Led the successful delivery of multiple web solutions, achieving a 95 percentage client satisfaction rate through transparent communication and regular progress updates. \n Tools and Technology: Next JS, Redux, MongoDB, Microsoft SQL, TypeScript, Git and GitHub, Node js, Express js,",
       location: "Bhopal, Madhya Pradesh",
     },
   ];
@@ -134,13 +138,13 @@ const Resume: React.FC = () => {
       location: "Personal Project",
     },
     {
-        period: "April 2023",
-        title: "StudyNotion Ed-Tech Web Application",
-        company: "MERN Stack",
-        description:
-          "• Developed comprehensive ed-tech platform using JavaScript, React.js, Node.js, and MongoDB\n• Implemented responsive UI/UX designs with HTML, CSS, and Tailwind CSS\n• Built and integrated Rest API services using Express.js and Postman with MongoDB Atlas",
-        location: "Personal Project",
-      },
+      period: "April 2023",
+      title: "StudyNotion Ed-Tech Web Application",
+      company: "MERN Stack",
+      description:
+        "• Developed comprehensive ed-tech platform using JavaScript, React.js, Node.js, and MongoDB\n• Implemented responsive UI/UX designs with HTML, CSS, and Tailwind CSS\n• Built and integrated Rest API services using Express.js and Postman with MongoDB Atlas",
+      location: "Personal Project",
+    },
   ];
 
   const renderTimelineSection = (
@@ -225,9 +229,11 @@ const Resume: React.FC = () => {
   };
 
   return (
-    <section id='resume' className="md:py-16 py-12">
+    <section id="resume" className="md:py-16 py-12">
       <div className="container">
-          <h2 className="md:text-5xl text-3xl font-bold text-center text-gray-800 mb-8">My Resume</h2>
+        <h2 className="md:text-5xl text-3xl font-bold text-center text-gray-800 mb-8">
+          My Resume
+        </h2>
         <div className="flex justify-center overflow-x-auto rounded-lg mb-8 md:mb-16">
           <div className="inline-flex bg-white rounded-lg ml-60 md:ml-0 min-w-max shadow-md p-1 space-x-1">
             {tabs.map((tab) => (
